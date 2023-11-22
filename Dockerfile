@@ -19,6 +19,8 @@ RUN apt update && apt install openssh-server -y && \
 RUN ssh-keygen -A
 
 COPY sandbox-entrypoint /usr/local/bin
+RUN chmod +x /usr/local/bin/sandbox-entrypoint
+
 ENTRYPOINT ["/usr/local/bin/sandbox-entrypoint"]
 
 
