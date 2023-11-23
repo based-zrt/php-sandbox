@@ -25,3 +25,4 @@ ENTRYPOINT ["/usr/local/bin/sandbox-entrypoint"]
 
 
 WORKDIR /php
+RUN chown $USERNAME:$USER_GID /php
